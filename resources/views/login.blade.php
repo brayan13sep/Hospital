@@ -9,27 +9,26 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Login Hospital</title>
 
     <!-- Bootstrap core CSS -->
-    {!! Html::style('../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')!!}
-    {!! Html::style('../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-
-    <!-- Custom styles for this template -->
-    {!! Html::style('../vendor/twbs/bootstrap/docs/examples/signin/signin.css')!!}
+    {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')!!}
     
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
+    {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/docs/examples/signin/signin.css')!!}
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    {!! Html::script('../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')!!}
-    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')!!}
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Custom styles for this template -->
+    {!! Html::script('/hospital/publi/../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')!!}
   </head>
 
   <body>
@@ -37,24 +36,24 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <h2 class="form-signin-heading">Iniciar sesion</h2>
+        <label for="inputEmail" class="sr-only">Usuario</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me"> Recordarme
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+        <button class="btn btn-lg btn-primary btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
       </form>
 
     </div> <!-- /container -->
 
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    {!! Html::script('../vendor/twbs/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js')!!}
+    {!! Html::script('/hospital/public ../vendor/twbs/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js')!!}
     
   </body>
 </html>
