@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<?php 
-  require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
- ?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -17,19 +13,23 @@
     <title>Madre</title>
 
     <!-- Bootstrap core CSS -->
+  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}  
     
-    <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
+    
 
     <!-- Custom styles for this template -->
-    <link href="../docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-    <link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/examples/jumbotron-narrow/jumbotron-narrow.css')!!}
+    
+    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.css')!!}
+    
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../docs/assets/js/ie-emulation-modes-warning.js"></script>
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')!!}
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,21 +41,28 @@
   <body>
 
     <div class="container">
-      <?php require 'include/header.class.php'; ?>
-      <form method="POST" action="inserts/insert-madre.php" id="formulario">
+            <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Inicio</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Cerrar Sesion</a></li>
+                 </ul>
+              </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Hospital</h3>
+      </div>
+      <form method="POST" action="" id="formulario">
         <fieldset>
           <legend> Datos de la madre</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
-                <?php
-                  $sql='SELECT id,descripcion FROM tipodocumento'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?></select></td>
+</select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
             </tr>
@@ -84,13 +91,7 @@
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
-              <?php
-                  $sql='SELECT id,descripcion FROM estadocivil'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+              
               </select></td>
             </tr>
             <tr>
@@ -105,13 +106,7 @@
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
-                <?php
-                  $sql='SELECT id,descripcion FROM niveleducativo'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+                
               </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. Total de embarazos:</font></label></td>
               <td ><input type="text" name="total_de_embarazos" class="form-control" placeholder="Numero"></td>
@@ -137,7 +132,7 @@
         </fieldset> 
         <div class="row">
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
+          <button type="button" onclick=" location.href='{{ url('/hospital/public/certificados') }}'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
           <button type="submit" class="btn btn-primary">Siguiente <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
       </div>
       </form>
@@ -146,14 +141,20 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../docs/dist/js/bootstrap.min.js"></script>
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/dist/js/bootstrap.min.js')!!}
+    
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../docs/assets/js/vendor/holder.min.js"></script>
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/vendor/holder.min.js')!!}
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="../js/jquery-ui/jquery-ui.js"></script>
-    <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js')!!}
+    
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.min.js')!!}
+    
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.js')!!}
+    
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jaquery-ui/external/jquery/jquery.js')!!}
+    
     <script>
       $( function() {
     $( "#datepicker" ).datepicker({

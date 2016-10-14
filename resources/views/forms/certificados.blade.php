@@ -12,17 +12,22 @@
     <title>Home</title>
 
     <!-- Bootstrap core CSS -->
-    {{ Html::style('../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')}}
+  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}  
     
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    {{ Html::style('../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')}}
+  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
+    
 
     <!-- Custom styles for this template -->
-    {{ Html::style('../vendor/twbs/bootstrap/docs/examples/jumbotron-narrow/jumbotron-narrow.css')}}
+    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/examples/jumbotron-narrow/jumbotron-narrow.css')!!}
+    
+    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.css')!!}
+    
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    {{ Html::script('../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')}}
+    {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/ie-emulation-modes-warning.js')!!}
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,7 +42,7 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.php">Inicio</a></li>
+            <li role="presentation" class="active"><a href="#">Inicio</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
