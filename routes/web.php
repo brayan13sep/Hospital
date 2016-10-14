@@ -32,5 +32,5 @@ Route::get('/hospital/public/neonatoform', function()
     });
 Route::get('/hospital/public/profesionalforms', function()
     {
-        return View::make('/forms/profecional');
+        return View::make('/forms/profesional');
     });
