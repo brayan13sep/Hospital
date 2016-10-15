@@ -36,18 +36,23 @@
     <div class="container">
 
       <form class="form-signin">
+      {!! Form::open(['route' => '/hospital/public/login', 'class' => 'form']) !!}
         <h2 class="form-signin-heading">Iniciar sesion</h2>
         <label for="inputEmail" class="sr-only">Usuario</label>
+        {!! Form::email('email', '', ['class'=> 'form-control']) !!}
         <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
+        {!! Form::password('password', ['class'=> 'form-control']) !!}
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Recordarme
           </label>
         </div>
+        {!! Form::submit('login',['class' => 'btn btn-primary']) !!}
         <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
         <button class="btn btn-lg btn-primary btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
+        {!! Form::close() !!}
       </form>
 
     </div> <!-- /container -->
