@@ -22,10 +22,15 @@ Route::get('/hospital/public/certificados', function()
     {
         return View::make('/forms/certificados');
     });
-Route::get('/hospital/public/madreform', function()
-    {
-        return View::make('/forms/madre');
-    });
+
+//Prueba insertar datos de madre 
+
+Route::get('/hospital/public/madreform',array('madre'=>'MadreController@mFormulario'));
+Route::post('/hospital/public/madreform',array('madre'=>'MadreController@iFormulario'));
+Route::get('/hospital/public/madreform',array('madre'=>'MadreController@lFormulario'));
+
+
+
 Route::get('/hospital/public/neonatoform', function()
     {
         return View::make('/forms/neonato');
