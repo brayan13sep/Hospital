@@ -53,8 +53,15 @@
               </li>
           </ul>
         </nav>
+
+
+
         <h3 class="text-muted">Hospital</h3>
       </div>
+            <div class="panel panel-default">
+  <div class="panel-body">
+   
+
       <form method="POST" action="" id="formulario">
         <fieldset>
           <legend> Datos de la madre</legend>
@@ -130,13 +137,18 @@
             </tr>
           </table>
         </fieldset> 
+
+        <div class="col-sm-3" ></div>
+         <div class="col-sm-8" >
         <div class="row">
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
           <button type="button" onclick=" location.href='{{ url('/hospital/public/certificados') }}'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
           <button type="submit" class="btn btn-primary">Siguiente <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
       </div>
+    </div>
       </form>
-
+</div>
+</div>
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

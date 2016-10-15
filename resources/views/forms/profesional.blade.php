@@ -55,9 +55,11 @@
         </nav>
         <h3 class="text-muted">Hospital</h3>
       </div>
-      <form method="POST" action="inserts/insert-profecional.php" id="formulario">
+      <div class="panel panel-default">
+  <div class="panel-body">
+     <form method="POST" action="inserts/insert-profecional.php" id="formulario">
         <fieldset>
-          <legend> Datos del profecional que certifica el nacimiento</legend>
+          <legend>Datos del profecional que certifica el nacimiento</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profecion:</font></font></label></td>
@@ -103,14 +105,18 @@
             </tr>
           </table>
         </fieldset>
+        <div class="col-sm-3" ></div>
+         <div class="col-sm-8" >
         <div class="row">
           <button type="button"  onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
           <button type="button" onclick=" location.href='neonato.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
           <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
       </div>
 
-      
+      </div>
       </form>
+ </div>
+</div>
 
     </div> <!-- /container -->
 
