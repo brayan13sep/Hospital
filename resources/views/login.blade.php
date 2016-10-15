@@ -33,27 +33,55 @@
 
   <body>
 
-    <div class="container">
-
-      <form class="form-signin">
+ <div class="container ">
+  <center>
+<div class="col-md-3" ></div>
+<div class="col-md-6" >
+<div class="panel panel-primary " >
+  <div class="panel-heading">
+    <h3 class="panel-title">Login</h3>
+  </div>
+  <div class="panel-body">
+    <form class="form-signin">
 
         <h2 class="form-signin-heading">Iniciar sesion</h2>
-        <label for="inputEmail" class="sr-only">Usuario</label>
+         
+        <div class="form-group">
+         <div class="col-lg-16">
+            
+        <input type="text" id="" class="form-control" placeholder="Usuario" required autofocus>
         
-        <input type="email" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Recordarme
-          </label>
         </div>
-        
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
-        <button class="btn btn-lg btn-primary btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
-        
-      </form>
+        </div>
+
+        <div class="form-group">
+        <div class="col-lg-16">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <div class="col-lg-16">
+        <div class="checkbox">
+        <label>
+        <input type="checkbox" value="remember-me"> Recordarme
+        </label>
+        </div>
+        </div>
+        </div>
+       
+           <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+                </form>
+                <div class="form-group">
+               <div class="col-lg-3">
+              <button class="btn btn-xl btn-link btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
+              </div>
+             </div>
+                
+      </div>
+  </div>
+
+</div>
 
     </div> <!-- /container -->
 
@@ -62,3 +90,6 @@
     
   </body>
 </html>
+ <!--
+
+-->
