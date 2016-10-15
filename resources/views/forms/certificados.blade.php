@@ -53,13 +53,20 @@
         </nav>
         <h3 class="text-muted">Hospital</h3>
       </div>
-      <div class="page-header">
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel info</h3>
+  </div>
+  <div class="panel-body">
+    <div class="page-header">
         <h1>Modulo de certificado nacido vivo</h1>
         <p>
           <a href="madre.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
           <a href="editar-certificado.php" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar Certificado</a>
         </p>
       </div>
+ 
       <div class="page-header">
         <h1>Modulo de consultas</h1>
         <p>
@@ -73,6 +80,9 @@
         </p>
       </div>
     </div> <!-- /container -->
+ </div>
+</div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>

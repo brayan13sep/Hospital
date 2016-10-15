@@ -49,7 +49,7 @@
         <div class="form-group">
          <div class="col-lg-16">
             
-        <input type="text" id="" class="form-control" placeholder="Usuario" required autofocus>
+        <input type="text" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
         
         </div>
         </div>
