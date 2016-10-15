@@ -18,13 +18,6 @@ Route::get('/hospital/public/login', function()
     {
         return View::make('login');
     });
-
-
-
-Route::get('/hospital/public/login', 'AuthController@getLogin');
-Route::post('/hospital/public/login', ['as' =>'login', 'uses' => 'AuthController@postLogin']);
-
-
 Route::get('/hospital/public/certificados', function()
     {
         return View::make('/forms/certificados');
