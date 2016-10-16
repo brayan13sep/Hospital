@@ -23,11 +23,15 @@ Route::get('/hospital/public/certificados', function()
         return View::make('/forms/certificados');
     });
 
-//Prueba insertar datos de madre 
 
-Route::get('/hospital/public/madreform',array('madre'=>'MadreController@mFormulario'));
-Route::post('/hospital/public/madreform',array('madre'=>'MadreController@iFormulario'));
-Route::get('/hospital/public/madreform',array('madre'=>'MadreController@lFormulario'));
+//Rutas para el recurso
+Route::resource('/hospital/public/madreform','MadreController');
+//insertar registros
+Route::post('/hospital/public/madreform',array('madre'=>'MadreController@insertFormulario'));
+//eliminar registros
+Route::get('/hospital/public/madreform/destroy/{id}',['as' => 'madre/destroy', 'uses' => 'MadreController@deleteFormulario']);
+//buscar registros
+Route::post('/hospital/public/madreform/search',['as' => 'madre/search', 'uses' => 'MadreController@selectFormulario']);
 
 
 

@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Madre as Madre;
+use Illuminate\Database\Eloquent\Model;
+use App\Http\Madre as Madre;
 
 class MadreController extends Controller
 {
-    //Insertar datos
+    public function index()
+    {
+    	return \View::make('\forms\madre');
+    }
 
-    public function iFormulario(Requests $requests)
+
+    public function insertFormulario(Requests $requests)
     {
     	$madre = new Madre;
     	$madre ->dpi = $requests->dpi;
@@ -36,5 +41,16 @@ class MadreController extends Controller
 
     	$madre->save();
     	return redirect('/hospital/public/madreform');
+    }
+
+    public function mFormulario()
+    {
+    	return View::make('form/madre');
+    }
+
+    public function selectFormulario(Requests $Requests)
+    {
+    	$madre = Madre::all();
+    	return View::make('list',compact('madre'));
     }
 }
