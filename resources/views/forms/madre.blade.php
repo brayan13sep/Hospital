@@ -48,62 +48,68 @@
               <legend> Datos de la madre</legend>
               <table class="table table-bordered">
                 <tr>
-                  <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></label></td>
+                  <td bgcolor="#0D47A1"><label><font color="#FFFFF">{!! Form::label('full_name', 'Tipo de documento:')!!}</font></label></td>
                   <td>
                     <select name="TipoDocumento" class="form-control">
                       <option>Seleccione</option>
                     </select>
                   </td>
-                  <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
-                  <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
+                  <td bgcolor="#0D47A1"><label><font color="#FFFFF">{!! Form::label('full_name', 'Numero:')!!}</font></label></td>
+                  <td colspan="2">
+                  {!! Form::text('dpi', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'DPI']) !!}
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    {!! Form::label('full_name', 'Primer Apellido') !!}
-                    <label><font color="#FFFFF">Primer Apellido:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Primer Apellido:')!!}</font></label>
                   </td>
                   <td colspan="4">
-                    <input type="text" class="form-control" name="primer_apellido" placeholder="Primer Apellido">
+                  {!! Form::text('primer_apellido', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'primer apellido']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">RFID:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'RFID:')!!}</font></label>
                   </td>
                   <td colspan="4">
-                    <input type="text" class="form-control" name="RFID" placeholder="RFID">
+                    {!! Form::text('RFID', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'RFID']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Segundo Apellido:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Segundo Apellido:')!!}</font></label>
                   </td>
                   <td colspan="4">
-                    <input type="text" class="form-control" name="segundo_apellido" placeholder="Segundo Apellido">
+                  {!! Form::text('segundo_apellido', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'segundo apellido']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Nombres:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Nombre:')!!}</font></label>
                   </td>
                   <td colspan="4">
-                    <input type="text" class="form-control" name="Nombre" placeholder="Nombres">
+                  {!! Form::text('nombre', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Nombres']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Fecha de nacimiento:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Fecha de nacimiento:')!!}</font></label>
                   </td>
                   <td colspan="3">
-                    <input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy">
+                  {!! Form::text('fecha_nacimiento', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'mm/dd/yyyy', 'id' => 'datepicker']) !!}
+                   
                   </td>
                   <td colspan="2">
-                    <input type="text" class="form-control" name="Edad" placeholder="Edad">
+                    {!! Form::text('edad', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'edad']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Estado civil:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Estado civil:')!!}</font></label>
                   </td>
                   <td colspan="5">
                     <select name="estado_civil" class="form-control">
@@ -113,10 +119,11 @@
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Direccion:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Direccion:')!!}</font></label>
                   </td>
                   <td colspan="5">
-                    <textarea type="text" row="5" name="Direccion" class="form-control" placeholder="Direccion"></textarea>
+                  {!! Form::textarea('Direccion', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Direccion','row' => '5' ]) !!}
+                    
                   </td>
                 </tr>
               </table>
@@ -126,7 +133,7 @@
               <table class="table table-bordered">
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Nivel educativo:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Nivel educativo:')!!}</font></label>
                   </td>
                   <td colspan="3">
                     <select name="nivel_educativo" class="form-control">
@@ -134,42 +141,51 @@
                     </select>
                   </td>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">No. Total de embarazos:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'No. total de embarazos:')!!}</font></label>
                   </td>
                   <td >
-                    <input type="text" name="total_de_embarazos" class="form-control" placeholder="Numero">
+                  {!! Form::text('total_de_embarazos', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Numero']) !!}
+                    
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Tipo de ocupacion:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Tipo de ocupacion:')!!}</font></label>
                   </td>
-                  <td colspan="5"><input type="text" name="tipo_ocupacion" class="form-control" placeholder="Ocupacion"></td>
+                  <td colspan="5">
+                  {!! Form::text('tipo_ocupacion', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Ocupacion']) !!}
+                  
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Hijos actualmente vivos:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Hijos actualmente vivos:')!!}</font></label>
                   </td>
                   <td>
-                    <input type="text" name="hijos_actualmente_vivos" class="form-control" placeholder="Cantidad">
+                  {!! Form::text('hijos_actualmente_vivos', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Cantidad']) !!}
+                    
                   </td>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Hijos nacidos vivos que fallecieron:</font></label>
-                  </td>
-                  <td><input type="text" name="hijos_nacidos_vivo_que_fallecieron" class="form-control" placeholder="Cantidad"></td>
-                  <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">No. de abortos y nacidos muertos:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Hijos nacidos vivos que fallecieron:')!!}</font></label>
                   </td>
                   <td>
-                    <input type="text" name="abortos_o_nacidos_muertos" class="form-control" placeholder="Cantidad">
+                  {!! Form::text('hijos_nacidos_vivo_que_fallecieron', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Cantidad']) !!}
+                  
+                  </td>
+                  <td bgcolor="#0D47A1">
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'No. abortos y nacidos muertos:')!!}</font></label>
+                  </td>
+                  <td>
+                    {!! Form::text('abortos_o_nacidos_muertos', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Cantidad']) !!}
+
                   </td>
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">Fecha de nacimiento hijo anterior nacido vivo:</font></label>
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Fecha de nacimiento hijo anterior:')!!}</font></label>
                   </td>
                   <td colspan="2">
-                    <input type="text" class="form-control" name="fecha_nacimiento_ultimo_hijo" id="datepicker2" placeholder="mm/dd/yyyy">
+                  {!! Form::text('fecha_nacimiento_ultimo_hijo', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'mm/dd/yyyy', 'id' => 'datepicker2']) !!}
+                   
                   </td>
                   <td colspan="3"></td>
                 </tr>

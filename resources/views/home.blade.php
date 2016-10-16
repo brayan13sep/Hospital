@@ -53,7 +53,7 @@
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#about">Acerca de </a></li>
                 <li><a href="#contact">Contacto</a></li>
-                <li><a href="{{ url('/login') }}">Login</a></li>
+                <li><a href="{{ url('/login') }}">Registrar</a></li>
               </ul>
             </div>
           </div>

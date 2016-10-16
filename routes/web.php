@@ -25,7 +25,7 @@ Route::get('/hospital/public/certificados', function()
 
 
 //Rutas para el recurso
-Route::resource('/hospital/public/madreform','MadreController');
+Route::resource('/hospital/public/madreform','MadreController@index');
 //insertar registros
 Route::post('/hospital/public/madreform',array('madre'=>'MadreController@insertFormulario'));
 //eliminar registros

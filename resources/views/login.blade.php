@@ -70,7 +70,7 @@
         </div>
         </div>
        
-           <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+           <button onclick=" location.href='{{ url('/hospital/public/madreforms') }}'" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                 </form>
                 <div class="form-group">
                <div class="col-lg-3">
