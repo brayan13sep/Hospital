@@ -14,10 +14,11 @@ Route::get('/', function()
     {
         return View::make('home');
     });
-Route::get('/hospital/public/login', function()
+/*Route::get('/hospital/public/login', function()
     {
         return View::make('login');
     });
+*/
 Route::get('/hospital/public/certificados', function()
     {
         return View::make('/forms/certificados');
@@ -43,3 +44,10 @@ Route::get('/hospital/public/profesionalforms', function()
     {
         return View::make('/forms/profesional');
     });
+
+
+
+
+Route::get('/hospital/public/login', 'Auth\AuthController@getLogin');
+Route::post('/hospital/public/login', 'Auth\AuthController@postLogin');
+Route::get('auth\logout', 'Auth\AuthController@getLogout');

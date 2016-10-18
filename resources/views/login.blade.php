@@ -42,21 +42,21 @@
     <h3 class="panel-title">Login</h3>
   </div>
   <div class="panel-body">
-    <form class="form-signin">
-
+    <form class="form-signin" method="POST" action="\hospital\public\login">
+      {!! csrf_field() !!}
         <h2 class="form-signin-heading">Iniciar sesion</h2>
          
         <div class="form-group">
          <div class="col-lg-16">
             
-        <input type="text" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
+        <input type="text" name="usuario" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
         
         </div>
         </div>
 
         <div class="form-group">
         <div class="col-lg-16">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         </div>
         </div>
 
@@ -64,13 +64,13 @@
         <div class="col-lg-16">
         <div class="checkbox">
         <label>
-        <input type="checkbox" value="remember-me"> Recordarme
+        <input type="checkbox" value="remember"> Recordarme
         </label>
         </div>
         </div>
         </div>
        
-           <button onclick=" location.href='{{ url('/hospital/public/madreforms') }}'" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+           <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                 </form>
                 <div class="form-group">
                <div class="col-lg-3">

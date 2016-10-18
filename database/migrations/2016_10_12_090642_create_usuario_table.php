@@ -18,7 +18,8 @@ class CreateUsuarioTable extends Migration {
 			$table->string('usuario', 45)->nullable();
 			$table->string('password', 45)->nullable();
 			$table->integer('activo')->nullable();
-			$table->dateTime('timestamp')->nullable();
+			$table->string('remember_token', 100)->nullable();
+			$table->timestamps();
 		});
 	}
 
