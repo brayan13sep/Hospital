@@ -10,7 +10,7 @@
     <link rel="icon" href="../favicon.ico">
     <title>Madre</title>
     <!-- Bootstrap core CSS -->
-    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}  
+    {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
     <!-- Custom styles for this template -->
@@ -60,11 +60,29 @@
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Nombres:')!!}</font></label>
+                  </td>
+                  <td colspan="4">
+                  {!! Form::text('nombre', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Nombres']) !!}
+
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#0D47A1">
                     <label><font color="#FFFFF">{!! Form::label('full_name', 'Primer Apellido:')!!}</font></label>
                   </td>
                   <td colspan="4">
                   {!! Form::text('primer_apellido', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'primer apellido']) !!}
-                    
+
+                  </td>
+                </tr>
+                 <tr>
+                  <td bgcolor="#0D47A1">
+                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Segundo Apellido:')!!}</font></label>
+                  </td>
+                  <td colspan="4">
+                  {!! Form::text('segundo_apellido', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'segundo apellido']) !!}
+
                   </td>
                 </tr>
                 <tr>
@@ -73,25 +91,7 @@
                   </td>
                   <td colspan="4">
                     {!! Form::text('RFID', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'RFID']) !!}
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Segundo Apellido:')!!}</font></label>
-                  </td>
-                  <td colspan="4">
-                  {!! Form::text('segundo_apellido', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'segundo apellido']) !!}
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td bgcolor="#0D47A1">
-                    <label><font color="#FFFFF">{!! Form::label('full_name', 'Nombre:')!!}</font></label>
-                  </td>
-                  <td colspan="4">
-                  {!! Form::text('nombre', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Nombres']) !!}
-                    
+
                   </td>
                 </tr>
                 <tr>
@@ -100,11 +100,11 @@
                   </td>
                   <td colspan="3">
                   {!! Form::text('fecha_nacimiento', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'mm/dd/yyyy', 'id' => 'datepicker']) !!}
-                   
+
                   </td>
                   <td colspan="2">
                     {!! Form::text('edad', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'edad']) !!}
-                    
+
                   </td>
                 </tr>
                 <tr>
@@ -123,7 +123,7 @@
                   </td>
                   <td colspan="5">
                   {!! Form::textarea('Direccion', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Direccion','row' => '5' ]) !!}
-                    
+
                   </td>
                 </tr>
               </table>
@@ -145,7 +145,7 @@
                   </td>
                   <td >
                   {!! Form::text('total_de_embarazos', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Numero']) !!}
-                    
+
                   </td>
                 </tr>
                 <tr>
@@ -154,7 +154,7 @@
                   </td>
                   <td colspan="5">
                   {!! Form::text('tipo_ocupacion', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Ocupacion']) !!}
-                  
+
                 </tr>
                 <tr>
                   <td bgcolor="#0D47A1">
@@ -162,14 +162,14 @@
                   </td>
                   <td>
                   {!! Form::text('hijos_actualmente_vivos', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Cantidad']) !!}
-                    
+
                   </td>
                   <td bgcolor="#0D47A1">
                     <label><font color="#FFFFF">{!! Form::label('full_name', 'Hijos nacidos vivos que fallecieron:')!!}</font></label>
                   </td>
                   <td>
                   {!! Form::text('hijos_nacidos_vivo_que_fallecieron', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'Cantidad']) !!}
-                  
+
                   </td>
                   <td bgcolor="#0D47A1">
                     <label><font color="#FFFFF">{!! Form::label('full_name', 'No. abortos y nacidos muertos:')!!}</font></label>
@@ -185,7 +185,7 @@
                   </td>
                   <td colspan="2">
                   {!! Form::text('fecha_nacimiento_ultimo_hijo', null, ['class' => 'form-control' , 'required' => 'required', 'placeholder' => 'mm/dd/yyyy', 'id' => 'datepicker2']) !!}
-                   
+
                   </td>
                   <td colspan="3"></td>
                 </tr>
