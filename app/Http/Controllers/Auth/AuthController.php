@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Hash;
+use Auth;
+
 
 class AuthController extends Controller
 {
@@ -49,19 +51,17 @@ class AuthController extends Controller
 
         public function postLogin(Request $request)
     {
-        $this->validate($request, [
-            'usuario' => 'required', 'password' => 'required',
-        ]);
+        $this->validate($request, ['usuario' => 'required', 'password' => 'required']);
 
                 //added
 
               //  echo 'made it here====   ';
             $tvar = $request->input('usuario');
             //echo $tvar.' ';
-            $pw = Hash::make($request->input('password'));
+            $pw = $request->input('password');
             //echo $pw.' ';
             //echo "".$this->auth->attempt(['password' => $pw])."";
-            if ($this->auth->attempt(['usuario' => $tvar, 'password' =>$pw]))
+            if (auth::attempt(['usuario' => $tvar, 'password' =>$pw] ))
         {
                    // echo 'logged in========'.$request->user->usuario;
                     //echo 'logged in========'.$request->user()->usuario;
@@ -74,25 +74,25 @@ class AuthController extends Controller
                 {
                    //Log::debug('Log something');
                     //echo ' not logged in '.$tvar.'  '.$pw;
-                    return redirect('\hospital\public\login');
+                    return redirect('/hospital/public/login');
                 }
 
                 //added
-
+/*
     $credentials = $request->only('usuario', 'password');
 
         if ($this->auth->attempt($credentials, $request->has('remember')))
         {
             return redirect($this->redirectPath());
-        }
+        }else{
 
-        return redirect('\hospital\public\login')
+        return redirect('/hospital/public/login')
                     ->withInput($request->only('usuario'))
                     ->withErrors([
                         'usuario' => 'These credentials do not match our records.',
                     ]);
-    }
-
+    }*/
+}
         public function getLogout()
     {
         $this->auth->logout();

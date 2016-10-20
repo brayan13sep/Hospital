@@ -10,6 +10,7 @@
 | database. Just tell the factory how a default model should look.
 |
 */
+use Carbon\Carbon;
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
@@ -18,7 +19,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'usuario' => $faker->name,
         'password' => bcrypt(str_random(10)),
         'activo' => 1,
-        'remember_token' => str_random(10),
-        'api_token' => str_random(50)
+        'timestamp' => Carbon::now()->format('Y-m-d H:i:s'),
+        'token' => str_random(10)
     ];
 });
