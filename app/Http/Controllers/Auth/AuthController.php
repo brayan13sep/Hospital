@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -22,7 +19,7 @@ class AuthController extends Controller
     | authentication of existing users. By default, this controller uses
     | a simple trait to add these behaviors. Why don't you explore it?
     |
-    */
+     */
 
     use AuthenticatesUsers;
 
@@ -40,60 +37,55 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
-
-           public function getLogin()
+    public function getLogin()
     {
         //return view('auth.login');
-                return view('login');
+        return view('login');
     }
 
-        public function postLogin(Request $request)
+    public function postLogin(Request $request)
     {
         $this->validate($request, [
             'usuario' => 'required', 'password' => 'required',
         ]);
 
-                //added
+        //added
 
-              //  echo 'made it here====   ';
-            $tvar = $request->input('usuario');
-            //echo $tvar.' ';
-            $pw = Hash::make($request->input('password'));
-            //echo $pw.' ';
-            //echo "".$this->auth->attempt(['password' => $pw])."";
-            if ($this->auth->attempt(['usuario' => $tvar, 'password' =>$pw]))
-        {
-                   // echo 'logged in========'.$request->user->usuario;
-                    //echo 'logged in========'.$request->user()->usuario;
-                    //$yourvar = $request->user()->usuario;
-                    //echo $yourvar;
-                    //echo "====loggin in now";
-                    return redirect('/hospital/public/certificados');
+        //  echo 'made it here====   ';
+        $tvar = $request->input('usuario');
+        //echo $tvar.' ';
+        $pw = Hash::make($request->input('password'));
+        //echo $pw.' ';
+        //echo "".$this->auth->attempt(['password' => $pw])."";
+        if ($this->auth->attempt(['usuario' => $tvar, 'password' => $pw])) {
+            // echo 'logged in========'.$request->user->usuario;
+            //echo 'logged in========'.$request->user()->usuario;
+            //$yourvar = $request->user()->usuario;
+            //echo $yourvar;
+            //echo "====loggin in now";
+            return redirect('certificados');
+        } else {
+            //Log::debug('Log something');
+            //echo ' not logged in '.$tvar.'  '.$pw;
+            return redirect('login');
         }
-            else
-                {
-                   //Log::debug('Log something');
-                    //echo ' not logged in '.$tvar.'  '.$pw;
-                    return redirect('\hospital\public\login');
-                }
 
-                //added
+        //added
 
-    $credentials = $request->only('usuario', 'password');
+        $credentials = $request->only('usuario', 'password');
 
-        if ($this->auth->attempt($credentials, $request->has('remember')))
-        {
+        if ($this->auth->attempt($credentials, $request->has('remember'))) {
             return redirect($this->redirectPath());
         }
 
         return redirect('\hospital\public\login')
-                    ->withInput($request->only('usuario'))
-                    ->withErrors([
-                        'usuario' => 'These credentials do not match our records.',
-                    ]);
+            ->withInput($request->only('usuario'))
+            ->withErrors([
+                'usuario' => 'These credentials do not match our records.',
+            ]);
     }
 
-        public function getLogout()
+    public function getLogout()
     {
         $this->auth->logout();
 

@@ -13,18 +13,18 @@
     <title>Neonato</title>
 
     <!-- Bootstrap core CSS -->
-  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}  
-    
+  {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/dist/css/bootstrap.min.css')!!}
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
-    
+
 
     <!-- Custom styles for this template -->
     {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/docs/examples/jumbotron-narrow/jumbotron-narrow.css')!!}
-    
+
     {!! Html::style('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.css')!!}
-    
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -55,7 +55,7 @@
       </div>
       <div class="panel panel-default">
   <div class="panel-body">
-   
+
       <form method="POST" action="inserts/insert-neonato.php" id="formulario">
         <fieldset>
 
@@ -67,7 +67,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Peso:</font></label></td>
               <td ><input name="Peso" type="text" class="form-control" placeholder="gr."></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Talla:</font></label></td>
-              <td ><input name="Talla" type="text" class="form-control" placeholder="cm."></td> 
+              <td ><input name="Talla" type="text" class="form-control" placeholder="cm."></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
@@ -93,7 +93,7 @@
                 </select></td>
             </tr>
           </table>
-        </fieldset> 
+        </fieldset>
         <fieldset>
           <legend>Datos del parto</legend>
           <table class="table table-bordered">
@@ -143,17 +143,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
  {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/dist/js/bootstrap.min.js')!!}
-    
+
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/vendor/holder.min.js')!!}
-    
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js')!!}
-    
+
     {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.min.js')!!}
-    
+
     {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jquery-ui/jquery-ui.js')!!}
-    
+
     {!! Html::script('/hospital/public/../vendor/twbs/bootstrap/js/jaquery-ui/external/jquery/jquery.js')!!}
     <script>
       $( function() {

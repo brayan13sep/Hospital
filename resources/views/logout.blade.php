@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')!!}
-    
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     {!! Html::style('/hospital/publi/../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
@@ -48,7 +48,7 @@
               <button class="btn btn-xl btn-link btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
               </div>
              </div>
-                
+
       </div>
   </div>
 
@@ -58,7 +58,7 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     {!! Html::script('/hospital/public ../vendor/twbs/bootstrap/docs/assets/js/ie10-viewport-bug-workaround.js')!!}
-    
+
   </body>
 </html>
  <!--

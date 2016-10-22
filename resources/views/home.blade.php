@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     {!! Html::style('../vendor/twbs/bootstrap/dist/css/bootstrap.min.css')!!}
-    
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     {!! Html::style('../vendor/twbs/bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css')!!}
@@ -29,7 +29,7 @@
 
     <!-- Custom styles for this template -->
     {!! Html::style('../vendor/twbs/bootstrap/docs/examples/carousel/carousel.css')!!}
-    
+
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -53,8 +53,11 @@
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#about">Acerca de </a></li>
                 <li><a href="#contact">Contacto</a></li>
-                <li><a href="{{ url('/login') }}">Registrar</a></li>
-              </ul>
+                </ul>
+               <ul class="nav navbar-nav navbar-right">
+               <li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
+
+            </ul>
             </div>
           </div>
         </nav>
@@ -88,7 +91,7 @@
             <div class="carousel-caption">
               <h1>Registro De Datos Electonico</h1>
               <p></p>
-              
+
             </div>
           </div>
         </div>
@@ -98,7 +101,7 @@
             <div class="carousel-caption">
               <h1> Seguridad Para Neonatos</h1>
               <p></p>
-             
+
             </div>
           </div>
         </div>
@@ -125,8 +128,8 @@
         <div class="col-lg-4">
           <img class="img-circle" src="/Hospital/public/image/RFID.jpg" width="140" height="140">
           <h2>Tecnologia RFID</h2>
-          <p>RFID (Radio Frequency IDentification, en español identificación por radiofrecuencia) 
-             Es un sistema de almacenamiento y recuperación de datos remoto que usa dispositivos denominados 
+          <p>RFID (Radio Frequency IDentification, en español identificación por radiofrecuencia)
+             Es un sistema de almacenamiento y recuperación de datos remoto que usa dispositivos denominados
              etiquetas, tarjetas, transpondedores o tags RFID. El propósito fundamental de la tecnología RFID
              es transmitir la identidad de un objeto (número de serie único) mediante ondas de radio.
              Las tecnologías RFID se agrupan dentro de las denominadas Auto ID
@@ -139,14 +142,14 @@
                salidas, analógicas y digitales, en un entorno de desarrollo que está basado en el lenguaje de
                programación Processing. Es un dispositivo que conecta el mundo físico con el mundo virtual, o el
                mundo analógico con el digital.</p>
-          
+
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="/Hospital/public/image/web.png" width="140" height="140">
           <h2>Plataforma</h2>
           <p>Sistema base que mejora el uso de Harware con software, lo que permite a los usuarios tener
              un amigable entorno en el cual pueden tener inforamcion actualizada y consistete e los datos.
-             Su objetivo principal es prestar servicio a los profesionales de la salud para mejorar 
+             Su objetivo principal es prestar servicio a los profesionales de la salud para mejorar
              la calidad de la atención sanitaria.
              </p>
         </div><!-- /.col-lg-4 -->
@@ -175,7 +178,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="/Hospital/public/image/vision.png" 
+          <img class="featurette-image img-responsive center-block" src="/Hospital/public/image/vision.png"
         </div>
       </div>
 
